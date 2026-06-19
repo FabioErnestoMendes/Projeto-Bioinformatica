@@ -23,7 +23,7 @@ ou dados de treino anotados.
 - Refinamento morfológico e separação de agregados por watershed seletivo
 - Extração automática de descritores geométricos (área, comprimento, largura,
   esfericidade, compacidade, excentricidade, circularidade)
-- Classificação automática em **Fibra, Fragmento, Filme, Esfera, Agregado**
+- Classificação automática em **Fiber, Fragment, Film, Bead, Agregate**
 - Modos de processamento de imagem individual e em lote
 - Geração automática de dataset Excel e relatório HTML
 - Extração de metadados TIFF para calibração de escala física (µm/pixel)
