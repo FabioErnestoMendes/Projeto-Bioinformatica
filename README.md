@@ -20,8 +20,9 @@ microscopia de fluorescência, no contexto do projeto RESOLVE.
 |---|---|
 | `Pasta-1` | Artigo intercalar — primeira entrega do projeto |
 | `Pasta-2` | Apresentação final em PowerPoint e PDF |
-| `Pasta-3` | Artigo final do projeto e código-fonte MATLAB do framework PlastID |
+| `Pasta-3` | Artigo final do projeto |
 | `Pasta-Imagens` | Imagens de exemplo em formato TIF, resultados de segmentação e dataset global |
+| `Ficheiros-com-codigo` | Código-fonte MATLAB do framework PlastID |
 
 ---
 
