@@ -59,7 +59,6 @@ ou dados de treino anotados.
 
 > Os ficheiros com prefixo `esc_` são callbacks legacy da interface antiga baseada
 > em menus e não estão ativos no workflow atual do App Designer.
-> O `teste.m` é um script de desenvolvimento mantido apenas para referência.
 
 ---
 
