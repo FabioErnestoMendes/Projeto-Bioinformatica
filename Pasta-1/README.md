@@ -22,4 +22,4 @@ fase do projeto.
 
 Este relatório representa trabalho em progresso. A metodologia final,
 os resultados experimentais e a descrição completa do sistema encontram-se
-no artigo principal localizado na pasta raiz deste repositório.
+no artigo principal localizado na Pasta-3 deste repositório.
