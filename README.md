@@ -21,11 +21,11 @@ microscopia de fluorescência, no contexto do projeto RESOLVE.
 | `Pasta-1` | Artigo intercalar — primeira entrega do projeto |
 | `Pasta-2` | Apresentação final em PowerPoint e PDF |
 | `Pasta-3` | Artigo final do projeto e código-fonte MATLAB do framework PlastID |
-| `Ficheiros-com-codigo` | Código-fonte MATLAB do framework PlastID |
+| `Pasta-Imagens` | Imagens de exemplo em formato TIF, resultados de segmentação e dataset global |
 
 ---
 
 ## Autores
 
-Fábio Mendes, Daniela Mesquita, Danilo Oliveira, Anália Lourenço  
+Fábio Mendes, Daniela Mesquita, Danilo Oliveira, Anália Lourenço
 Universidade do Minho, Braga, Portugal — 2025/2026
