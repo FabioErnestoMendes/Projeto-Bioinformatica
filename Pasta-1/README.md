@@ -5,7 +5,7 @@ fase do projeto.
 
 ## Documento
 
-- `Artigo_Fase1.pdf` — Relatório intercalar que descreve a revisão
+- `Projeto_Bioinformática.pdf` — Relatório intercalar que descreve a revisão
   bibliográfica inicial, a definição do problema e a metodologia
   preliminar para a deteção automática de microplásticos em imagens
   de microscopia de fluorescência.
