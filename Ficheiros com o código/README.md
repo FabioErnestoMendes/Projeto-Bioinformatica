@@ -55,7 +55,7 @@ ou dados de treino anotados.
 | `esc_ser.m` | Callback GUI – modo série/imagem individual |
 | `esc_trtg.m` | Callback GUI – opções de tratamento de partículas |
 | `esc_trtl.m` | Callback GUI – opções de tratamento de fluorescência |
-| `teste.m` | Script de desenvolvimento e testes (não usado em produção) |
+| `teste.m` | Função placeholder para `pha_fluor` — gerada automaticamente pelo MATLAB (não usada em produção) |
 
 > Os ficheiros com prefixo `esc_` são callbacks legacy da interface antiga baseada
 > em menus e não estão ativos no workflow atual do App Designer.
