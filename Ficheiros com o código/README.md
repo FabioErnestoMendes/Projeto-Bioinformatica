@@ -39,15 +39,28 @@ annotated training data.
 | `bin_itr.m` | Hybrid thresholding module |
 | `adquirir.m` | Image acquisition and file selection |
 | `euclidean.m` | Morphological feature computation |
+| `fluo_red.m` | Red fluorescence channel processing |
+| `processar_lote.m` | Batch processing controller |
+| `PlastID.m` | Main application entry point (App Designer) |
 | `gravar.m` | Save segmentation results |
 | `gravar_param.m` | Save per-particle parameters |
 | `gravar_log.m` | Save processing log |
 | `gerar_relatorio_html.m` | Generate individual HTML report |
 | `gerar_relatorio_lote.m` | Generate batch HTML report |
-| `final.m` | Cleanup and close session |
+| `fina.m` | Cleanup and close session |
+| `esc_avc.m` | GUI callback – analysis mode selection |
+| `esc_dcv.m` | GUI callback – deconvolution toggle |
+| `esc_flr.m` | GUI callback – fluorescence channel selection |
+| `esc_lim.m` | GUI callback – manual threshold limits |
+| `esc_pre.m` | GUI callback – preprocessing options |
+| `esc_ser.m` | GUI callback – series/single image mode |
+| `esc_trtg.m` | GUI callback – particle treatment options |
+| `esc_trtl.m` | GUI callback – fluorescence treatment options |
+| `teste.m` | Development/testing script (not used in production) |
 
-> Some files are legacy or auxiliary and may not be active in the
-> current App Designer workflow.
+> Files prefixed with `esc_` are legacy GUI callbacks from the original
+> menu-based interface and are not active in the current App Designer workflow.
+> `teste.m` is a development script kept for reference only.
 
 ---
 
@@ -61,8 +74,8 @@ annotated training data.
 ## Usage
 
 ### Single Image
-Run the MATLAB App Designer GUI, select **single-image mode**, choose
-a `.bmp`, `.tif` or `.jpg` file and click process.
+Run `PlastID.m` via MATLAB App Designer, select **single-image mode**,
+choose a `.bmp`, `.tif` or `.jpg` file and click process.
 
 ### Batch Processing
 Select **batch mode** and point to a folder containing microscopy images.
