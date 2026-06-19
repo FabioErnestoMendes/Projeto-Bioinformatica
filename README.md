@@ -29,4 +29,5 @@ microscopia de fluorescência, no contexto do projeto RESOLVE.
 ## Autores
 
 Fábio Mendes, Daniela Mesquita, Danilo Oliveira, Anália Lourenço
+
 Universidade do Minho, Braga, Portugal — 2025/2026
