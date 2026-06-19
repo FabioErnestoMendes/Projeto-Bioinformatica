@@ -1,101 +1,100 @@
-# Microplastic Detection – MATLAB Image Analysis Framework
+# Deteção de Microplásticos – Framework de Análise de Imagem em MATLAB
 
-Automated framework for detection, segmentation, morphological
-characterization and classification of microplastic particles in
-fluorescence microscopy images. Developed at Universidade do Minho
-under the RESOLVE project.
-
----
-
-## Overview
-
-This system processes Nile Red fluorescence microscopy images through
-a classical image-processing pipeline and exports per-particle metrics,
-classification results, and statistical reports — for both individual
-images and large batches — without requiring manual intervention or
-annotated training data.
+Framework automatizado para deteção, segmentação, caracterização morfológica
+e classificação de partículas de microplásticos em imagens de microscopia de
+fluorescência. Desenvolvido na Universidade do Minho no âmbito do projeto RESOLVE.
 
 ---
 
-## Features
+## Visão Geral
 
-- Fluorescence channel extraction and enhancement (Top-Hat, CLAHE)
-- Hybrid thresholding (Otsu + local adaptive, logical conjunction)
-- Morphological refinement and selective watershed aggregate separation
-- Automatic extraction of geometric descriptors (area, length, width,
-  sphericity, compactness, eccentricity, circularity)
-- Rule-based classification into **Fiber, Fragment, Film, Bead, Aggregate**
-- Single-image and batch-processing modes
-- Automatic Excel dataset and HTML report generation
-- TIFF metadata extraction for physical scale calibration (µm/pixel)
+O sistema processa imagens de microscopia de fluorescência com coloração Nile Red
+através de um pipeline clássico de processamento de imagem, exportando métricas
+por partícula, resultados de classificação e relatórios estatísticos — tanto para
+imagens individuais como para grandes lotes — sem necessitar de intervenção manual
+ou dados de treino anotados.
 
 ---
 
-## File Structure
+## Funcionalidades
 
-| File | Description |
+- Extração e realce do canal fluorescente (Top-Hat, CLAHE)
+- Limiarização híbrida (Otsu + adaptativa local, conjunção lógica)
+- Refinamento morfológico e separação de agregados por watershed seletivo
+- Extração automática de descritores geométricos (área, comprimento, largura,
+  esfericidade, compacidade, excentricidade, circularidade)
+- Classificação automática em **Fibra, Fragmento, Filme, Esfera, Agregado**
+- Modos de processamento de imagem individual e em lote
+- Geração automática de dataset Excel e relatório HTML
+- Extração de metadados TIFF para calibração de escala física (µm/pixel)
+
+---
+
+## Estrutura de Ficheiros
+
+| Ficheiro | Descrição |
 |---|---|
-| `corpo.m` | Main processing pipeline |
-| `bin_itr.m` | Hybrid thresholding module |
-| `adquirir.m` | Image acquisition and file selection |
-| `euclidean.m` | Morphological feature computation |
-| `fluo_red.m` | Red fluorescence channel processing |
-| `processar_lote.m` | Batch processing controller |
-| `PlastID.m` | Main application entry point (App Designer) |
-| `gravar.m` | Save segmentation results |
-| `gravar_param.m` | Save per-particle parameters |
-| `gravar_log.m` | Save processing log |
-| `gerar_relatorio_html.m` | Generate individual HTML report |
-| `gerar_relatorio_lote.m` | Generate batch HTML report |
-| `fina.m` | Cleanup and close session |
-| `esc_avc.m` | GUI callback – analysis mode selection |
-| `esc_dcv.m` | GUI callback – deconvolution toggle |
-| `esc_flr.m` | GUI callback – fluorescence channel selection |
-| `esc_lim.m` | GUI callback – manual threshold limits |
-| `esc_pre.m` | GUI callback – preprocessing options |
-| `esc_ser.m` | GUI callback – series/single image mode |
-| `esc_trtg.m` | GUI callback – particle treatment options |
-| `esc_trtl.m` | GUI callback – fluorescence treatment options |
-| `teste.m` | Development/testing script (not used in production) |
+| `corpo.m` | Pipeline principal de processamento |
+| `bin_itr.m` | Módulo de limiarização híbrida |
+| `adquirir.m` | Aquisição de imagem e seleção de ficheiro |
+| `euclidean.m` | Cálculo de descritores morfológicos |
+| `fluo_red.m` | Processamento do canal de fluorescência vermelha |
+| `processar_lote.m` | Controlador de processamento em lote |
+| `PlastID.m` | Ponto de entrada da aplicação (App Designer) |
+| `gravar.m` | Gravação dos resultados de segmentação |
+| `gravar_param.m` | Gravação dos parâmetros por partícula |
+| `gravar_log.m` | Gravação do log de processamento |
+| `gerar_relatorio_html.m` | Geração do relatório HTML individual |
+| `gerar_relatorio_lote.m` | Geração do relatório HTML em lote |
+| `fina.m` | Limpeza e fecho da sessão |
+| `esc_avc.m` | Callback GUI – seleção do modo de análise |
+| `esc_dcv.m` | Callback GUI – ativação da desconvolução |
+| `esc_flr.m` | Callback GUI – seleção do canal fluorescente |
+| `esc_lim.m` | Callback GUI – limites manuais de threshold |
+| `esc_pre.m` | Callback GUI – opções de pré-tratamento |
+| `esc_ser.m` | Callback GUI – modo série/imagem individual |
+| `esc_trtg.m` | Callback GUI – opções de tratamento de partículas |
+| `esc_trtl.m` | Callback GUI – opções de tratamento de fluorescência |
+| `teste.m` | Script de desenvolvimento e testes (não usado em produção) |
 
-> Files prefixed with `esc_` are legacy GUI callbacks from the original
-> menu-based interface and are not active in the current App Designer workflow.
-> `teste.m` is a development script kept for reference only.
+> Os ficheiros com prefixo `esc_` são callbacks legacy da interface antiga baseada
+> em menus e não estão ativos no workflow atual do App Designer.
+> O `teste.m` é um script de desenvolvimento mantido apenas para referência.
 
 ---
 
-## Requirements
+## Requisitos
 
-- MATLAB R2021a or later
+- MATLAB R2021a ou superior
 - Image Processing Toolbox
 
 ---
 
-## Usage
+## Utilização
 
-### Single Image
-Run `PlastID.m` via MATLAB App Designer, select **single-image mode**,
-choose a `.bmp`, `.tif` or `.jpg` file and click process.
+### Imagem Individual
+Executar `PlastID.m` via MATLAB App Designer, selecionar o modo **imagem individual**,
+escolher um ficheiro `.bmp`, `.tif` ou `.jpg` e iniciar o processamento.
 
-### Batch Processing
-Select **batch mode** and point to a folder containing microscopy images.
-Results are saved automatically to:
-- `Resultados_Globais.xlsx` — per-particle Excel dataset
-- `relatorio_global.html` — global HTML report with charts
-
----
-
-## Output
-
-Each analysis produces:
-- Segmented image overlay (green contour on original)
-- Area and length distribution histograms
-- Particle class distribution pie chart
-- Per-particle morphological metrics table
+### Processamento em Lote
+Selecionar o modo **lote** e indicar uma pasta com imagens de microscopia.
+Os resultados são guardados automaticamente em:
+- `Resultados_Globais.xlsx` — dataset Excel por partícula
+- `relatorio_global.html` — relatório HTML global com gráficos
 
 ---
 
-## Authors
+## Resultados
+
+Cada análise produz:
+- Imagem segmentada com contorno verde sobre a imagem original
+- Histogramas de distribuição de área e comprimento
+- Gráfico circular de distribuição de classes de partículas
+- Tabela de métricas morfológicas por partícula
+
+---
+
+## Autores
 
 Fábio Mendes, Daniela Mesquita, Danilo Oliveira, Anália Lourenço  
 Universidade do Minho, Braga, Portugal
